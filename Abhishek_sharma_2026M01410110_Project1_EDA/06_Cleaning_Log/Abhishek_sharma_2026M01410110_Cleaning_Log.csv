@@ -1,0 +1,9 @@
+Step,Column,Problem_found,Action_taken,Why_this_choice,Rows_affected,Note_on_Rows_affected
+1,Gender / Region,8 and 12 spellings,Mapped to 2 and 4 standard labels,Same value written differently; mapping loses no information,426,Gender cells + Region cells with a non-standard spelling (raw file)
+2,Order_Date / Delivery_Date,4 mixed formats; 15 deliveries before order,Parsed to datetime; 15 bad delivery dates set to missing and flagged,"Real delivery date is unknown, so inventing one would be worse than leaving it blank",952,Order_Date and Delivery_Date cells not in YYYY-MM-DD in the raw file (15 Delivery_Date values were also set to missing)
+3,Duplicate rows,"84 repeated rows (61 exact, 23 formatting-only)","Dropped, kept first copy",A transaction must appear once; double counting would inflate Sales and Profit,84,"Rows removed (7,084 -> 7,000)"
+4,Age,6 impossible (-12 to 999) + 142 missing,"Impossible -> missing; filled from the same customer, flagged in Age_Imputed","Age is constant per customer, so this is exact, not a guess",146,
+5,Income,9 extreme errors (up to 17.5 lakh) + 253 missing,Errors and gaps filled from the same customer; 6 leftovers with segment median; flagged in Income_Imputed,Income is constant per customer; median (not mean) is used because income is right-skewed,254,
+6,Discount,6 invalid (-0.2 to 2.0) + 71 missing,Recomputed from Sales / (Quantity x Unit_Price); flagged in Discount_Imputed,"Formula matches recorded discount on valid rows, so the rebuilt value is reliable",76,
+7,Customer_Rating,428 missing (6%),"Left missing, flag Rating_Given added",A rating is the customer's opinion; inventing it would create fake satisfaction,420,
+8,Satisfaction_Level,179 missing,"Labelled ""Not Recorded""",Keeps the rows and keeps the gap visible instead of hiding it,175,

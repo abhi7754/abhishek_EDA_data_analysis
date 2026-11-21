@@ -1,0 +1,37 @@
+Column,Type,Meaning,Allowed_values_or_formula,Cleaning_or_how_created,Original_or_New,Missing_in_raw_file,Missing_in_cleaned_file
+Transaction_ID,Text,Unique ID of each transaction,TXN + number,Duplicates removed so it is unique,Original,0,0
+Customer_ID,Text,ID of the customer; repeats when the same customer orders again,CUST + number,Used to recover Age and Income,Original,0,0
+Order_Date,Date,Date the order was placed,2023-01-01 to 2024-12-31,4 mixed formats converted to one real date,Original,0,0
+Delivery_Date,Date,Date the order was delivered,On or after Order_Date,Converted to date; 15 dates before the order date set to missing,Original,106,120
+Age,Number,Customer age in years,18 to 100,Impossible values (-12 to 999) and gaps filled from the same customer,Original,142,0
+Gender,Text,Customer gender,Male / Female,8 spellings mapped to 2,Original,0,0
+Income,Number,Annual customer income (Rs.),"About 15,000 to 2.9 lakh",9 extreme errors and gaps filled from the same customer,Original,253,0
+Region,Text,Sales region,North / South / East / West,12 spellings mapped to 4,Original,0,0
+State,Text,State of the customer (inside Region),16 states,None needed,Original,0,0
+City,Text,City of the customer (inside State),48 cities,None needed,Original,0,0
+Customer_Segment,Text,Type of customer,Consumer / Corporate / Home Office,None needed,Original,0,0
+Product_Category,Text,Product group,5 categories,None needed,Original,0,0
+Product,Text,Product name inside the category,25 products (5 in each category),None needed,Original,0,0
+Quantity,Number,Units bought in the order,"Whole numbers, 1 to 10",None needed,Original,0,0
+Unit_Price,Number,Price of one unit (Rs.),Above 0,None needed,Original,0,0
+Discount,Number,Discount as a proportion,0 to 0.5,Invalid (-0.2 to 2.0) and missing values rebuilt from Sales formula,Original,71,0
+Sales,Number,Order value after discount (Rs.),Quantity x Unit_Price x (1 - Discount),None needed (used to rebuild Discount),Original,0,0
+Cost,Number,Cost of the order (Rs.),Above 0,None needed,Original,0,0
+Profit,Number,Sales minus Cost (Rs.),Sales - Cost,None needed (always matched Sales - Cost),Original,0,0
+Payment_Method,Text,How the customer paid,Debit Card / Credit Card / UPI / Cash on Delivery / Net Banking,None needed,Original,0,0
+Delivery_Mode,Text,Delivery option chosen,Same-Day / Express / Standard,None needed,Original,0,0
+Customer_Rating,Number,Rating given by the customer,1 to 5 (not every order is rated),Left missing on purpose (not invented),Original,428,420
+Satisfaction_Level,Text,Customer satisfaction,Low / Medium / High / Not Recorded,Missing values labelled Not Recorded,Original,179,0
+Returned,Text,Was the order returned,Yes / No,None needed,Original,0,0
+Delivery_Date_Fixed,True/False,Flag: delivery date was before order date and was set to missing,True / False,Created by me,New (flag),,0
+Age_Imputed,True/False,Flag: Age was filled or corrected,True / False,Created by me,New (flag),,0
+Income_Imputed,True/False,Flag: Income was filled or corrected,True / False,Created by me,New (flag),,0
+Discount_Imputed,True/False,Flag: Discount was rebuilt from the Sales formula,True / False,Created by me,New (flag),,0
+Rating_Given,True/False,Flag: the customer gave a rating,True / False,Created by me,New (flag),,0
+Profit_Margin,Number,Profit divided by Sales,0 to 1 (about 0.33 typical),Profit / Sales,New (feature),,0
+Delivery_Days,Number,Days between order and delivery,1 to 17; blank if delivery date missing,Delivery_Date - Order_Date,New (feature),,120
+Revenue_per_Customer,Number,Total Sales of that customer over all orders (Rs.),Above 0,Sum of Sales per Customer_ID,New (feature),,0
+Orders_per_Customer,Number,Number of orders of that customer,1 or more,Count of Transaction_ID per Customer_ID,New (feature),,0
+Order_Year,Number,Year of the order,2023 / 2024,Taken from Order_Date,New (feature),,0
+Order_Month,Text,Year-month of the order,2023-01 to 2024-12,Taken from Order_Date,New (feature),,0
+Discount_Band,Text,Discount grouped in ranges,0-10% / 10-20% / 20-30% / 30-50%,pd.cut on Discount,New (feature),,0

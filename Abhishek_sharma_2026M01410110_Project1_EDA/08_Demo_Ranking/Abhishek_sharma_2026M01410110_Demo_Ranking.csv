@@ -1,0 +1,43 @@
+Ranking,Rank,Name,Orders,Total_Sales,Total_Profit,Profit_Margin_pct,Avg_Order_Value,Return_Rate_pct
+Regions by sales,1,East,1765,20018192.35,6607664.0,33.01,11341.75,11.95
+Regions by sales,2,West,1798,19758995.56,6472920.07,32.76,10989.43,12.79
+Regions by sales,3,South,1761,18890109.55,6177763.05,32.7,10726.92,12.27
+Regions by sales,4,North,1676,18063891.81,5869535.54,32.49,10777.98,13.31
+Top 10 states by sales,1,Maharashtra,478,5769832.79,1853082.39,32.12,12070.78,15.69
+Top 10 states by sales,2,Odisha,464,5383099.86,1803676.64,33.51,11601.51,13.15
+Top 10 states by sales,3,Gujarat,463,5340495.04,1744201.57,32.66,11534.55,11.66
+Top 10 states by sales,4,West Bengal,426,5146575.1,1699744.34,33.03,12081.16,11.27
+Top 10 states by sales,5,Kerala,461,4982346.88,1588983.65,31.89,10807.69,12.15
+Top 10 states by sales,6,Karnataka,436,4901683.38,1629329.37,33.24,11242.39,13.3
+Top 10 states by sales,7,Tamil Nadu,437,4900024.81,1626913.36,33.2,11212.87,13.04
+Top 10 states by sales,8,Jharkhand,451,4890135.64,1585842.7,32.43,10842.87,9.31
+Top 10 states by sales,9,Goa,465,4707325.05,1590178.2,33.78,10123.28,12.26
+Top 10 states by sales,10,Haryana,394,4681379.32,1513142.02,32.32,11881.67,12.44
+Product categories by sales,1,Electronics,1975,37639557.39,12352219.5,32.82,19058.0,12.1
+Product categories by sales,2,Furniture,979,26057893.88,8547604.77,32.8,26616.85,13.18
+Product categories by sales,3,Clothing,1533,7781680.39,2521027.84,32.4,5076.11,13.5
+Product categories by sales,4,Grocery,1669,2685875.1,874840.19,32.57,1609.27,12.46
+Product categories by sales,5,Office Supplies,844,2566182.51,832190.36,32.43,3040.5,11.49
+Top 10 products by sales,1,LED Monitor,402,7859851.28,2594430.07,33.01,19551.87,11.94
+Top 10 products by sales,2,Wireless Mouse,399,7742278.92,2495279.31,32.23,19404.21,12.78
+Top 10 products by sales,3,USB-C Hub,419,7523589.74,2505695.77,33.3,17956.06,13.13
+Top 10 products by sales,4,Laptop Stand,384,7347640.69,2404988.08,32.73,19134.48,13.28
+Top 10 products by sales,5,Bluetooth Speaker,371,7166196.76,2351826.27,32.82,19315.89,9.16
+Top 10 products by sales,6,Filing Cabinet,207,5880199.69,1887417.49,32.1,28406.76,12.08
+Top 10 products by sales,7,Study Table,196,5493977.41,1820756.36,33.14,28030.5,13.27
+Top 10 products by sales,8,Bean Bag,212,5479646.08,1825083.14,33.31,25847.39,11.32
+Top 10 products by sales,9,Office Chair,195,4941685.01,1618803.01,32.76,25341.97,12.82
+Top 10 products by sales,10,Bookshelf,169,4262385.69,1395544.77,32.74,25221.22,17.16
+Customer segments by sales,1,Consumer,3840,41718896.33,13703577.36,32.85,10864.3,12.55
+Customer segments by sales,2,Corporate,2114,23551202.48,7665257.93,32.55,11140.59,13.2
+Customer segments by sales,3,Home Office,1046,11461090.46,3759047.37,32.8,10957.07,11.38
+Top 10 customers by sales,1,CUST11430,8,254002.26,85634.95,33.71,31750.28,12.5
+Top 10 customers by sales,2,CUST10354,11,238064.84,85259.22,35.81,21642.26,9.09
+Top 10 customers by sales,3,CUST10459,14,221690.61,70307.89,31.71,15835.04,7.14
+Top 10 customers by sales,4,CUST10302,9,219114.52,61882.1,28.24,24346.06,11.11
+Top 10 customers by sales,5,CUST10970,6,218118.79,76625.76,35.13,36353.13,0.0
+Top 10 customers by sales,6,CUST11150,6,213584.29,70427.38,32.97,35597.38,16.67
+Top 10 customers by sales,7,CUST10594,10,213154.5,73452.41,34.46,21315.45,0.0
+Top 10 customers by sales,8,CUST10080,10,212963.02,55243.52,25.94,21296.3,0.0
+Top 10 customers by sales,9,CUST10654,8,192677.5,67420.5,34.99,24084.69,0.0
+Top 10 customers by sales,10,CUST11543,7,191698.91,68827.84,35.9,27385.56,0.0
